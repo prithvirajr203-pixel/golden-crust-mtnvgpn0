@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Golden Crust Bakery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root { --primary-bg: #e8f5e9; --accent: #ffcc80; --neutral: #ffffff; --text-dark: #333; --text-light: #fff; }
+body { margin:0; font-family: Arial, sans-serif; color: var(--text-dark); line-height:1.6; }
+a { color: var(--accent); text-decoration:none; }
+header { background: var(--primary-bg); padding:1rem; text-align:center; }
+header h1 { margin:0; }
+nav ul { list-style:none; display:flex; justify-content:center; gap:1rem; padding:0; margin:0; }
+nav a { padding:0.5rem 1rem; background:var(--accent); color:var(--text-dark); border-radius:4px; }
+section { padding:2rem 1rem; }
+.hero { background:url('https://source.unsplash.com/1600x900/?bakery') center/cover no-repeat; color:var(--text-light); text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center; height:60vh; }
+.hero h2 { font-size:2.5rem; margin-bottom:0.5rem; }
+.hero p { font-size:1.2rem; margin-bottom:1.5rem; }
+.hero a { background:var(--accent); color:var(--text-dark); padding:0.75rem 1.5rem; border-radius:4px; font-weight:bold; }
+.about { display:flex; flex-wrap:wrap; background:var(--neutral); }
+.about .text, .about .image { flex:1 1 300px; padding:1rem; }
+.about img { width:100%; height:auto; border-radius:8px; }
+.menu-showcase { background:var(--accent); color:var(--text-dark); }
+.menu-showcase h2 { text-align:center; margin-bottom:1rem; }
+.menu-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
+.card { background:var(--neutral); padding:1rem; border-radius:8px; text-align:center; }
+.card img { width:100%; height:150px; object-fit:cover; border-radius:4px; }
+.card h3 { margin:0.5rem 0; }
+.card p { margin:0; }
+.custom-cakes { background:var(--accent); color:var(--text-dark); }
+.custom-cakes h2 { text-align:center; margin-bottom:1rem; }
+.carousel { position:relative; overflow:hidden; }
+.carousel img { width:100%; height:400px; object-fit:cover; }
+.carousel .overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); display:flex; flex-direction:column; justify-content:center; align-items:center; color:var(--text-light); padding:1rem; text-align:center; }
+.carousel a { margin-top:1rem; background:var(--accent); color:var(--text-dark); padding:0.5rem 1rem; border-radius:4px; }
+.order-ahead { background:var(--neutral); }
+.order-ahead h2 { text-align:center; margin-bottom:1rem; }
+.order-form { display:flex; flex-wrap:wrap; gap:1rem; }
+.order-form label { flex:1 1 200px; }
+.order-form input, .order-form select, .order-form textarea { width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px; }
+.order-form button { background:var(--accent); color:var(--text-dark); padding:0.75rem 1.5rem; border:none; border-radius:4px; cursor:pointer; }
+.map { flex:1 1 300px; }
+.map iframe { width:100%; height:300px; border:0; border-radius:8px; }
+.contact-info { background:var(--neutral); }
+.contact-info h2 { text-align:center; margin-bottom:1rem; }
+.contact-details { display:flex; flex-wrap:wrap; gap:1rem; }
+.contact-details div { flex:1 1 200px; }
+.testimonials { background:var(--accent); color:var(--text-dark); }
+.testimonials h2 { text-align:center; margin-bottom:1rem; }
+.testimonial-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
+.testimonial-card { background:var(--neutral); padding:1rem; border-radius:8px; text-align:center; }
+.testimonial-card img { width:80px; height:80px; border-radius:50%; object-fit:cover; margin-bottom:0.5rem; }
+footer { background:var(--primary-bg); text-align:center; padding:1rem; }
+@media(max-width:600px){ .about{ flex-direction:column; } .order-form{ flex-direction:column; } }
+</style>
+</head>
+<body>
+<header>
+<h1>Golden Crust Bakery</h1>
+<nav>
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#menu_showcase">Menu</a></li>
+<li><a href="#custom_cakes_gallery">Custom Cakes</a></li>
+<li><a href="#order_ahead">Order Ahead</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact_info">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="hero" class="hero">
+<h2>Freshly Baked Goodness, Right Here in Your Neighborhood</h2>
+<p>At Golden Crust, we turn simple ingredients into comforting breads, pastries, and cakes that bring families and friends together. Every loaf is baked fresh daily, just for you.</p>
+<a href="#order_ahead">Order Ahead</a>
+</section>
+
+<section id="about" class="about">
+<div class="text">
+<h2>Our Story</h2>
+<p>Golden Crust started as a family kitchen in 2010, growing into a beloved neighborhood bakery that values local ingredients, artisanal techniques, and community connection. We’re proud to serve students, office workers, and families with the same warm, fresh treats every day.</p>
+<a href="#contact_info">Meet the Bakers</a>
+</div>
+<div class="image">
+<img src="https://source.unsplash.com/600x400/?bakery" alt="Bakery interior">
+</div>
+</section>
+
+<section id="menu_showcase" class="menu-showcase">
+<h2>Our Menu</h2>
+<p>Explore our wide selection of breads, pastries, and daily specials—all baked fresh in our ovens. From hearty sourdough to sweet croissants, there’s something for every taste and schedule.</p>
+<div class="menu-cards">
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?sourdough" alt="Sourdough Bread">
+<h3>Sourdough Loaf</h3>
+<p>$5.99</p>
+</div>
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?croissant" alt="Croissant">
+<h3>Butter Croissant</h3>
+<p>$3.49</p>
+</div>
+<div class="card">
+<img src="https://source.unsplash.com/400x300/?special" alt="Special Item">
+<h3>Daily Special</h3>
+<p>$4.99</p>
+</div>
+</div>
+</section>
+
+<section id="custom_cakes_gallery" class="custom-cakes">
+<h2>Custom Cakes</h2>
+<p>Celebrate birthdays, graduations, or just a sweet moment with a cake designed just for you. Choose from classic flavors, modern designs, or let us create a unique masterpiece.</p>
+<div class="carousel">
+<img src="https://source.unsplash.com/800x400/?cake" alt="Cake 1">
+<div class="overlay">
+<h3>Elegant Vanilla</h3>
+<p>Classic vanilla with fresh berries.</p>
+<a href="#order_ahead">Create Your Cake</a>
+</div>
+</div>
+</section>
+
+<section id="order_ahead" class="order-ahead">
+<h2>Order Ahead</h2>
+<p>Select your favorite items, choose a pickup time, and let us handle the rest. It’s quick, convenient, and guarantees you’ll get the freshest baked goods on your schedule.</p>
+<div class="order-form">
+<label>
+Item:
+<select name="item">
+<option value="sourdough">Sourdough Loaf</option>
+<option value="croissant">Butter Croissant</option>
+<option value="cake">Custom Cake</option>
+</select>
+</label>
+<label>
+Quantity:
+<input type="number" name="quantity" min="1" value="1">
+</label>
+<label>
+Pickup Date:
+<input type="date" name="date">
+</label>
+<label>
+Pickup Time:
+<input type="time" name="time">
+</label>
+<label>
+Name:
+<input type="text" name="name" placeholder="Your Name">
+</label>
+<label>
+Contact:
+<input type="email" name="contact" placeholder="Email or Phone">
+</label>
+<button type="submit">Place Order</button>
+</div>
+<div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019842593842!2d-122.419415084681!3d37.77492977975944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2sGolden%20Crust%20Bakery!5e0!3m2!1sen!2sus!4v1610000000000" allowfullscreen="" loading="lazy"></iframe>
+</div>
+</section>
+
+<section id="contact_info" class="contact-info">
+<h2>Get in Touch</h2>
+<p>We’re here to answer questions, take orders, and share our love of baking. Visit us, call, or email—our doors are always open to the community.</p>
+<div class="contact-details">
+<div>
+<h3>Address</h3>
+<p>123 Main St, San Francisco, CA 94102</p>
+</div>
+<div>
+<h3>Phone</h3>
+<p>(415) 555-1234</p>
+</div>
+<div>
+<h3>Email</h3>
+<p>info@goldencrust.com</p>
+</div>
+<div>
+<h3>Hours</h3>
+<p>Mon-Fri 7am-7pm<br>Sat-Sun 8am-6pm</p>
+</div>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019842593842!2d-122.419415084681!3d37.77492977975944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2sGolden%20Crust%20Bakery!5e0!3m2!1sen!2sus!4v1610000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<section id="testimonials" class="testimonials">
+<h2>What Our Customers Say</h2>
+<p>Families, students, and office workers alike rave about our fresh breads, comforting pastries, and personalized cakes. Join the conversation and taste the difference for yourself.</p>
+<div class="testimonial-cards">
+<div class="testimonial-card">
+<img src="https://source.unsplash.com/80x80/?person" alt="Customer 1">
+<p>"The bread is the best in town!"</p>
+<h4>Jane Doe</h4>
+</div>
+<div class="testimonial-card">
+<img src="https://source.unsplash.com/80x80/?person" alt="Customer 2">
+<p>"I love the custom cakes, so sweet!"</p>
+<h4>John Smith</h4>
+</div>
+<div class="testimonial-card">
+<img src="https://source.unsplash.com/80x80/?person" alt="Customer 3">
+<p>"Great pastries for my office break." </p>
+<h4>Emily Johnson</h4>
+</div>
+</div>
+</section>
+
+<footer>
+<p>&copy; 2026 Golden Crust Bakery</p>
+</footer>
+</body>
+</html>
